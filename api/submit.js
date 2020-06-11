@@ -20,5 +20,5 @@ module.exports = async (req, res) => {
   await new Promise(resolve => setTimeout(resolve, 1000))
 
   res.setHeader('Location', response.data.html_url)
-  res.status(302)
+  res.status(302).send('')
 }
