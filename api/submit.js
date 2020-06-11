@@ -2,9 +2,9 @@
 import { Octokit } from '@octokit/rest'
 
 let TOKEN = process.env.TOKEN
-let REPO = process.env.REPO
+let REPOSITORY = process.env.REPOSITORY
 
-let [owner, repo] = REPO.split('/')
+let [owner, repo] = REPOSITORY.split('/')
 
 module.exports = async (req, res) => {
   let { url } = req.body
