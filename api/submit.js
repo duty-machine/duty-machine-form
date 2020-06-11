@@ -7,7 +7,7 @@ let REPO = process.env.REPO
 let [owner, repo] = REPO.split('/')
 
 module.exports = async (req, res) => {
-  let { url } = req.query
+  let { url } = req.body
 
   let octokit = new Octokit({ auth: TOKEN })
   let response = await octokit.issues.create({
